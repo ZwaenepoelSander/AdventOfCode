@@ -40,9 +40,3 @@ class Solution(StrSplitSolution):
     # @answer(1234)
     def part_2(self) -> int:
         return extract_numbers_part2(self.input)
-
-
-
-    # @answer((1234, 4567))
-    # def solve(self) -> tuple[int, int]:
-    #     pass

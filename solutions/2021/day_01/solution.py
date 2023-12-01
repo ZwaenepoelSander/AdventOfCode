@@ -5,13 +5,23 @@
 from ...base import IntSplitSolution, answer
 
 
-def depthIncreases(depths: list[int]) -> int:
+def depth_increases(depths: list[int]) -> int:
     depth = 0
     for i in range(len(depths)):
         if i == 0:
             continue
         elif depths[i] > depths[i - 1]:
             depth += 1
+    return depth
+
+def depth_sum_increases(depths: list[int]) -> int:
+    depth = 0
+    for i in range(len(depths)):
+        if i == 0:
+            continue
+        if i < len(depths):
+            if (depths[i] + depths[i-1] + depths[i-2]) > (depths[i-1] + depths[i-2] + depths[i-3]):
+                depth += 1
     return depth
 
 
@@ -21,11 +31,11 @@ class Solution(IntSplitSolution):
 
     # @answer(1234)
     def part_1(self) -> int:
-        return depthIncreases(self.input)
+        return depth_increases(self.input)
 
     # @answer(1234)
     def part_2(self) -> int:
-        pass       
+        return depth_sum_increases(self.input)
 
     # @answer((1234, 4567))
     # def solve(self) -> tuple[int, int]:

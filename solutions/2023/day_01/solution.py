@@ -1,5 +1,3 @@
-# Generated using @xavdid's AoC Python Template: https://github.com/xavdid/advent-of-code-python-template
-
 # puzzle prompt: https://adventofcode.com/2023/day/1
 
 from ...base import StrSplitSolution, answer
